@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.jyh.core.model"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 26
@@ -41,4 +41,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    api(libs.timber)
 }

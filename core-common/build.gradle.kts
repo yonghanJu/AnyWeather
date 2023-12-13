@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.jyh.core.common"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 26
@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core-model"))
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
