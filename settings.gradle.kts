@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "AnyWeather"
 include(":app")
 include(":core-common")
+include(":core-model")
