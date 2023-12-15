@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -48,4 +49,8 @@ dependencies {
 
     // Retrofit + Converter
     implementation(libs.bundles.network)
+
+    // DI
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }
