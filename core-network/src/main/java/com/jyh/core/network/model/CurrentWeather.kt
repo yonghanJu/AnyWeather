@@ -8,7 +8,7 @@ data class CurrentWeather(
     @SerialName("air_quality") val airQuality: AirQuality,
     @SerialName("cloud") val cloud: Int,
     @SerialName("condition") val condition: WeatherCondition,
-    @SerialName("feelslike_c") val feelslikeC: Double,
+    @SerialName("feelslike_c") val feelsLikeC: Double,
     @SerialName("humidity") val humidity: Int,
     @SerialName("is_day") val isDay: Int,
     @SerialName("last_updated") val lastUpdated: String,
