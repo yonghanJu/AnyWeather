@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface WeatherService {
     @GET(API.GET_CURRENT_WEATHER)
     suspend fun getCurrentWeather(
-        @Query(QUERY.AQI_QUERY) requireAirQuality: Boolean,
+        @Query(QUERY.AQI_QUERY) requireAirQuality: String,
         @Query(QUERY.LANG_QUERY) lang: String,
         @Query(QUERY.LOCATION_QUERY) location: String,
     ): WeatherResponse
