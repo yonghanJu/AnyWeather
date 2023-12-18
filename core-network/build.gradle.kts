@@ -1,3 +1,5 @@
+import java.util.Properties
+
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     alias(libs.plugins.com.android.library)
@@ -6,6 +8,10 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
 }
+
+val properties = Properties()
+properties.load(project.rootProject.file("local.properties").inputStream())
+val weatherApiKey: String = properties.getProperty("weather_api_key")
 
 android {
     namespace = "com.jyh.core.network"
@@ -16,6 +22,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        buildConfigField("String", "WEATHER_API_KEY", weatherApiKey)
     }
 
     buildTypes {
@@ -33,6 +40,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
