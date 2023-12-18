@@ -1,6 +1,6 @@
 package com.jyh.core.common.network.di
 
-import com.jyh.core.common.network.DawnMarketDispatchers
+import com.jyh.core.common.network.AnyWeatherDispatchers
 import com.jyh.core.common.network.Dispatcher
 import dagger.Module
 import dagger.Provides
@@ -13,10 +13,10 @@ import kotlinx.coroutines.Dispatchers
 @InstallIn(SingletonComponent::class)
 class DispatchersModule {
     @Provides
-    @Dispatcher(DawnMarketDispatchers.IO)
+    @Dispatcher(AnyWeatherDispatchers.IO)
     fun providesIODispatcher(): CoroutineDispatcher = Dispatchers.IO
 
     @Provides
-    @Dispatcher(DawnMarketDispatchers.Default)
+    @Dispatcher(AnyWeatherDispatchers.Default)
     fun providesDefaultDispatcher(): CoroutineDispatcher = Dispatchers.Default
 }
