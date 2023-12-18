@@ -4,9 +4,9 @@ import javax.inject.Qualifier
 
 @Qualifier
 @Retention(AnnotationRetention.RUNTIME)
-annotation class Dispatcher(val dispatcher: DawnMarketDispatchers)
+annotation class Dispatcher(val dispatcher: AnyWeatherDispatchers)
 
-enum class DawnMarketDispatchers {
+enum class AnyWeatherDispatchers {
     Default,
     IO,
 }
