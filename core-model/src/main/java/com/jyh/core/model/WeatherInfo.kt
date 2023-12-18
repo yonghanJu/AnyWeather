@@ -1,0 +1,26 @@
+package com.jyh.core.model
+
+data class WeatherInfo(
+    val co: Double,
+    val no2: Double,
+    val o3: Double,
+    val so2: Double,
+    val airQualityIndex: Int,
+    val conditionCode: Int,
+    val conditionIconUrl: String,
+    val conditionDescription: String,
+    val cloud: Int,
+    val feelsLikeC: Double,
+    val humidity: Int,
+    val isDay: Int,
+    val lastUpdated: String,
+    val precipMm: Double,
+    val pressureMb: Double,
+    val tempC: Double,
+    val uv: Double,
+    val visKm: Double,
+    val windDir: String,
+    val windKph: Double,
+    val region: String,
+    val localtime: String,
+)
